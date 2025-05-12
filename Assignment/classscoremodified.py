@@ -8,11 +8,12 @@ for number in range(1, number_of_students + 1):
 	score = int(input('Enter Student score:  '))
 	if score < 0 and score > 100:
 		print('Please Enter Valid Score:  ')
-	if score > first_highest_score:
+	if score > first_highest_score and score > second_highest_score:
 		second_highest_score = first_highest_score
 		first_highest_score = score
-		first_name = names
-	if score > second_highest_score:
+		second_name = first_name = names
+		first_name = score
+	elif score > second_highest_score:
 		second_highest_score = score
 		second_name = names
 print(f'The Student with the highest score is {first_name} with a score of {first_highest_score}')
