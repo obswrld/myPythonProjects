@@ -1,10 +1,8 @@
-purchase_price = float(input('Enter the purchase price (up to $1.00)'))
+purchase_price = float(input('Enter the purchase price (up to $1.00):   '))
 
-if 0 < purchase_price <= 1.00:
+if 0 < purchase_price <= 100:
 	total_paid = 100
-
-	change = total_paid - int(purchase_price * 100)
-
+	change = round(100 - (purchase_price * 100))
 	quarters = 0
 	dimes = 0
 	nickels = 0
