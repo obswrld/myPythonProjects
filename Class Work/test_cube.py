@@ -1,7 +1,7 @@
 import cube
-import unittest
+from unittest import TestCase
 
-class TestCube(unittest.TestCase):
+class TestCube(TestCase):
 	def test_that_getcube_function_exists(self):
 		cube.get_cube(3)
 
@@ -14,4 +14,8 @@ class TestCube(unittest.TestCase):
 		self.assertEqual(actual, expected)
 
 	def test_that_get_cube_function_work_for_number_between_1_to_10(self):
-		self.assertEqual(cube.get_cube(12), "Invalid number")
+		self.assertRaises(ValueError, cube.get_cube, 12)
+		self.assertRaises(ValueError, cube.get_cube, 13)
+
+	def test_that_get_cube_function_raises_value_error_with_negative_value(self):
+		self.assertRaises(ValueError, cube.get_cube, -12)

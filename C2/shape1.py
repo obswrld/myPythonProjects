@@ -14,20 +14,27 @@ for i in range(10, 1, - 1):
 
 print()
 
+
 for i in range(1, 11):
 	for j in range(1, i):
 		print(f'{' ':>1}', end =' ')
-	for k in range(1, 11, 1):
-		print(f'{'*':>1}', end=' ')
+	for k in range(11 - i):
+		print(f'{'*':>1}', end =' ')
 
 	print()
 
 print()
+
 
 for i in range(1, 11):
-	for j in range(11, -1):
-		print(f'{' ':>1}', end=' ')
-	for k in range(9, -11):
-		print(f'{'*':>1}', end=' ')
+	for j in range(10, i):
+		print(f'{' ':>1}', end =' ')
+	for k in range(i, 11):
+		print(f'{'*':>1}', end =' ')
 	print()
+
 print()
+
+
+
+
