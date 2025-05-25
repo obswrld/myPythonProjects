@@ -34,4 +34,10 @@ def withdraw(balance, amount):
 
 def all_accounts_obswrldbank():
 	return accounts
+
+def identify_accounts(identifier, identifier1):
+	for account in accounts:
+		if account[0] == identifier or account[1] == identifier1:	
+			return account
+	return None
 	

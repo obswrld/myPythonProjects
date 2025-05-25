@@ -1,0 +1,18 @@
+
+>>> type(scores)
+<class 'list'>
+>>> another_list = list()
+>>> type(another_list)
+<class 'list'>
+>>> id(scores)
+1854711625344
+>>> score.append(75)
+Traceback (most recent call last):
+scores.append(75)
+>>> scores.append(55)
+>>> scores.append(55)
+>>> scores.append(35)
+>>> scores
+[75, 55, 55, 35]
+>>> id(scores)
+1854711625344

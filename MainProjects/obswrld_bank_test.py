@@ -3,6 +3,7 @@ from obswrld_bank import accounts,create_account
 from obswrld_bank import accounts,deposit
 from obswrld_bank import accounts,withdraw
 from obswrld_bank import accounts,all_accounts_obswrldbank
+from obswrld_bank import accounts,identify_accounts
 
 class Testobswrld_bank (unittest.TestCase):
 	def test_account_created(self):
@@ -88,7 +89,16 @@ class Testobswrld_bank (unittest.TestCase):
 		create_account("john", "9059574321")
 		customer = all_accounts_obswrldbank()
 		self.assertEqual(5, len(accounts)) 
-	
+
+	def test_to_identify_customer_with_phone_number(self):
+		create_account("Oba", "09069672905")
+		customer = identify_accounts("0ba","09069672905")
+		self.assertTrue(customer, ["Oba", "09069672905"])
+
+	def test_to_identiy_customer_with_name(self):
+		create_account("Oba", "09069672905")
+		result = identify_accounts("oba","09069672905")
+		self.assertTrue(result, ["Oba", "09069672905"])
 	
 		
 		
