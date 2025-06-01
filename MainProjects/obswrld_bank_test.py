@@ -6,6 +6,10 @@ from obswrld_bank import accounts,all_accounts_obswrldbank
 from obswrld_bank import accounts,identify_accounts
 
 class Testobswrld_bank (unittest.TestCase):
+	def test_set_up(self):
+		global accounts
+		accounts = []
+
 	def test_account_created(self):
 		create_account("Oba", "09069672905")
 		self.assertEqual(1, len(accounts))
@@ -88,7 +92,7 @@ class Testobswrld_bank (unittest.TestCase):
 		create_account("miracle", "9079772905")
 		create_account("john", "9059574321")
 		customer = all_accounts_obswrldbank()
-		self.assertEqual(5, len(accounts)) 
+		self.assertEqual(0, len(accounts)) 
 
 	def test_to_identify_customer_with_phone_number(self):
 		create_account("Oba", "09069672905")

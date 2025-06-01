@@ -8,3 +8,4 @@ if password_count > 8 and password_count <= 16:
 	print('password is Strong')
 if password_count > 16:
 	print('Password very Strong')
+
