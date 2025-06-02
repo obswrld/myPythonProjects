@@ -1,7 +1,7 @@
 import random
 def multiplication_question():
 	num1 = random.randint(1, 9)
-	num2 = random.randint(1, 9)5? 
+	num2 = random.randint(1, 9) 
 	question = f'How much is {num1} times {num2}?'
 	answer = num1 * num2 
 	return question, answer 
